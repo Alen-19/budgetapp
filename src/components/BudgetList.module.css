@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #999;
+  font-size: 16px;
+}
+
+.budgetsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.budgetSection {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+

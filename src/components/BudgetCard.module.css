@@ -1,0 +1,247 @@
+.card {
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.budgetName {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  word-break: break-word;
+  flex: 1;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.deleteBtn:hover {
+  color: #d32f2f;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.value.positive {
+  color: #4CAF50;
+}
+
+.value.over {
+  color: #d32f2f;
+}
+
+.progressSection {
+  margin: 24px 0;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  background: #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress.overProgress {
+  background: linear-gradient(90deg, #d32f2f, #b71c1c);
+}
+
+.progressText {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+.expensesList {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 16px;
+}
+
+.expensesTitle {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.expenses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #fafafa;
+  border-radius: 4px;
+  font-size: 13px;
+  border-left: 3px solid #2196F3;
+}
+
+.expenseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.expenseName {
+  font-weight: 500;
+  color: #333;
+  word-break: break-word;
+}
+
+.expenseCategory {
+  font-size: 11px;
+  color: #999;
+}
+
+.expenseRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.expenseAmount {
+  font-weight: 600;
+  color: #d32f2f;
+  min-width: 70px;
+  text-align: right;
+}
+
+.deleteExpenseBtn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.deleteExpenseBtn:hover {
+  color: #d32f2f;
+}
+
+.noExpenses {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 13px;
+  margin: 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 16px;
+  }
+
+  .budgetName {
+    font-size: 18px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .statItem {
+    padding: 10px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .expenseItem {
+    flex-wrap: wrap;
+  }
+
+  .expenseRight {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+    justify-content: space-between;
+  }
+}
